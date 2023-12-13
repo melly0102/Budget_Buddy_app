@@ -6,4 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".inc_exp.DetailedListActivity">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="258dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="305dp"
+        android:text="This is the detailed List View"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,7 +11,7 @@ import com.example.budget_buddy_app.R
 class AddReceiptActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.x_activity_add_receipt)
+        setContentView(R.layout.activity_add_receipt)
 
         val categorySpinner = findViewById<Spinner>(R.id.spinner)
 

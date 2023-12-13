@@ -5,7 +5,7 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/hintergrund"
+    android:background="@drawable/background_img"
     >
 
     <ImageView
@@ -23,8 +23,9 @@
         android:id="@+id/btn_logout"
         android:layout_width="83dp"
         android:layout_height="61dp"
-        android:layout_marginStart="324dp"
         android:layout_marginTop="4dp"
+        android:contentDescription="LogoutButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/baseline_logout_24" />
@@ -54,6 +55,8 @@
 
         <EditText
             android:id="@+id/editTextNumber4"
+            android:hint="@string/app_name"
+
             android:layout_width="130dp"
             android:layout_height="51dp"
             android:layout_marginBottom="4dp"
@@ -93,6 +96,7 @@
             android:layout_height="48dp"
             android:layout_marginTop="4dp"
             android:ems="10"
+            android:hint="@string/app_name"
             android:inputType="number"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -111,12 +115,17 @@
             app:srcCompat="@drawable/baseline_euro_24" />
 
         <ImageButton
-            android:id="@+id/imageButton4"
+            android:id="@+id/btn_overview_calendar"
             android:layout_width="62dp"
             android:layout_height="59dp"
+            android:contentDescription="@android:string/ok"
+            android:hint="@string/app_name"
+            app:layout_constraintBottom_toTopOf="@+id/imageviewnew"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
             app:layout_constraintStart_toEndOf="@+id/imageView4"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.092"
             app:srcCompat="@drawable/baseline_calendar_month_24" />
 
         <TextView
@@ -144,6 +153,40 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <Button
+        android:id="@+id/btn_category_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="152dp"
+        android:text="Detailed Category View"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_overview_add_category"
+        android:layout_width="77dp"
+        android:layout_height="58dp"
+        android:contentDescription="@android:string/ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.052"
+        app:srcCompat="@drawable/add_icon" />
+
+    <ImageButton
+        android:id="@+id/btn_overview_category_detailed"
+        android:layout_width="83dp"
+        android:layout_height="68dp"
+        android:layout_marginBottom="228dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="parent"
+        android:contentDescription="@android:string/ok"
+        app:srcCompat="@drawable/arrow_right_icon" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

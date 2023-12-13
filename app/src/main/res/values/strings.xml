@@ -43,4 +43,12 @@
         libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
         vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
     </string>
+    <string name="edit_transaction">Edit Transaction</string>
+    <string name="edit_your_receipt">Edit your receipt</string>
+    <string name="save">Save</string>
+    <string name="add_receipt">Add Receipt</string>
+    <string name="euro">Euro</string>
+    <string name="add_category">Add category</string>
+    <string name="name">Name</string>
+    <string name="cause">Cause</string>
 </resources>

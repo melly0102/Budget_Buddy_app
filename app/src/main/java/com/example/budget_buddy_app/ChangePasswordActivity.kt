@@ -24,7 +24,9 @@ class ChangePasswordActivity : AppCompatActivity() {
         password2 = findViewById(R.id.password2)
 
         btn_reset.setOnClickListener(View.OnClickListener {
-            if (password1.text.toString() == password2.text.toString()){
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            /* if (password1.text.toString() == password2.text.toString()){
 
                 // Finish the current activity (optional, depending on your use case)
                 finish()
@@ -33,9 +35,10 @@ class ChangePasswordActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "The passwords don't match..", Toast.LENGTH_SHORT).show()
             }
+        })*/
         })
-        }
     }
+}
     /* private lateinit var binding: ActivityMainBinding
      lateinit var password2 : EditText
      lateinit var password1: EditText
