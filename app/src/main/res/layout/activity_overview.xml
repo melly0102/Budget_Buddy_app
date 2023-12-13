@@ -5,7 +5,7 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/hintergrund"
+    android:background="@drawable/background_img"
     >
 
     <ImageView
@@ -23,9 +23,9 @@
         android:id="@+id/btn_logout"
         android:layout_width="83dp"
         android:layout_height="61dp"
-        android:layout_marginStart="324dp"
         android:layout_marginTop="4dp"
         android:contentDescription="LogoutButton"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/baseline_logout_24" />
@@ -115,14 +115,17 @@
             app:srcCompat="@drawable/baseline_euro_24" />
 
         <ImageButton
-            android:id="@+id/imageButton4"
-            android:hint="@string/app_name"
-            android:contentDescription="@android:string/ok"
+            android:id="@+id/btn_overview_calendar"
             android:layout_width="62dp"
             android:layout_height="59dp"
+            android:contentDescription="@android:string/ok"
+            android:hint="@string/app_name"
+            app:layout_constraintBottom_toTopOf="@+id/imageviewnew"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.8"
             app:layout_constraintStart_toEndOf="@+id/imageView4"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.092"
             app:srcCompat="@drawable/baseline_calendar_month_24" />
 
         <TextView
@@ -161,16 +164,20 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/btn_add_category"
-        android:contentDescription="@android:string/ok"
+        android:id="@+id/btn_overview_add_category"
         android:layout_width="77dp"
         android:layout_height="58dp"
-        app:srcCompat="@drawable/add_icon"
-        tools:layout_editor_absoluteX="304dp"
-        tools:layout_editor_absoluteY="347dp" />
+        android:contentDescription="@android:string/ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.052"
+        app:srcCompat="@drawable/add_icon" />
 
     <ImageButton
-        android:id="@+id/btn_category_detailed"
+        android:id="@+id/btn_overview_category_detailed"
         android:layout_width="83dp"
         android:layout_height="68dp"
         android:layout_marginBottom="228dp"

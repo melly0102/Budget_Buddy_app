@@ -2,18 +2,21 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/hintergrund"
+    android:background="@drawable/background_img"
     >
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="257dp"
         android:layout_height="112dp"
-        app:srcCompat="@drawable/bb_logo" />
+        android:contentDescription="@android:string/ok"
+        app:srcCompat="@drawable/bb_logo"
+        tools:ignore="ImageContrastCheck" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -35,8 +38,8 @@
                 android:id="@+id/loginText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Add category"
-                android:textColor="@color/lavendar"
+                android:text="@string/add_category"
+                android:textColor="@color/lavender"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -45,26 +48,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="40dp"
-                android:background="@drawable/custom_edittext"
+                android:autofillHints=""
 
+                android:background="@drawable/custom_edittext"
                 android:drawablePadding="8dp"
-                android:hint="Name"
+                android:hint="@string/name"
+                android:inputType="textMultiLine"
                 android:padding="8dp"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textColorHint="#82B1FF"
+                tools:ignore="VisualLintTextFieldSize" />
 
             <EditText
                 android:id="@+id/cause"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
+                android:autofillHints=""
                 android:background="@drawable/custom_edittext"
-                android:drawablePadding="8dp"
 
-                android:hint="Cause"
+                android:drawablePadding="8dp"
+                android:hint="@string/cause"
                 android:inputType="textPassword"
                 android:padding="8dp"
-                android:textColor="@color/white" />
-
+                android:textColor="@color/white"
+                android:textColorHint="#82B1FF"
+                tools:ignore="VisualLintTextFieldSize" />
 
 
             <Button
@@ -76,7 +85,8 @@
                 android:layout_marginBottom="100dp"
                 android:background="@drawable/round_button"
                 android:orientation="vertical"
-                android:text="Save"
+                android:text="@string/save"
+                android:textColor="#263238"
                 android:textSize="18sp"
                 app:cornerRadius="20dp" />
 

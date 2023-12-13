@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/hintergrund"
+    android:background="@drawable/background_img"
     >
 
     <ImageView
@@ -34,7 +34,7 @@
                 android:layout_height="wrap_content"
                 android:text="Add Transaction"
                 android:textAlignment="center"
-                android:textColor="@color/lavendar"
+                android:textColor="@color/lavender"
                 android:textSize="36sp"
                 android:textStyle="bold" />
 
@@ -93,7 +93,7 @@
                 android:paddingTop="20dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                android:textColor="@color/lavendar"
+                android:textColor="@color/lavender"
                 />
 
             <Button
