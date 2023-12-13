@@ -9,6 +9,13 @@
     android:background="@drawable/hintergrund"
     >
 
+    <ImageButton
+        android:id="@+id/arrowRedirect"
+        android:layout_width="146dp"
+        android:layout_height="78dp"
+        android:contentDescription="@string/app_name"
+        app:srcCompat="@drawable/arrow_back_icon" />
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="229dp"

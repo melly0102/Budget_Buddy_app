@@ -2,6 +2,7 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -13,7 +14,9 @@
         android:id="@+id/edit_inc_imageview"
         android:layout_width="176dp"
         android:layout_height="78dp"
-        app:srcCompat="@drawable/bb_logo" />
+        app:srcCompat="@drawable/bb_logo"
+        tools:ignore="ImageContrastCheck"
+        android:importantForAccessibility="no" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -21,6 +24,17 @@
         android:layout_margin="30dp"
         app:cardCornerRadius="30dp"
         app:cardElevation="20dp">
+
+        <ImageButton
+            android:id="@+id/deleteBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="@android:string/ok"
+            app:srcCompat="@drawable/delete_icon"
+            tools:ignore="ImageContrastCheck,TouchTargetSizeCheck" />
+
+
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,7 +46,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Edit Transaction"
+                android:text="@string/edit_transaction"
                 android:textAlignment="center"
                 android:textColor="@color/lavendar"
                 android:textSize="36sp"
@@ -47,7 +61,8 @@
                 android:drawablePadding="8dp"
                 android:hint="name"
                 android:padding="8dp"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:textColorHint="#82B1FF" />
 
             <LinearLayout
                 android:layout_width="336dp"
@@ -65,7 +80,8 @@
                     android:hint="date"
                     android:minHeight="48dp"
                     android:padding="8dp"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:textColorHint="#82B1FF" />
 
                 <ImageButton
                     android:id="@+id/image_button_calendar"
@@ -75,21 +91,23 @@
                     android:contentDescription="@string/app_name"
                     app:srcCompat="@drawable/baseline_calendar_month_24" />
             </LinearLayout>
+
             <EditText
+                android:id="@+id/edit_amount"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/edit_amount"
-                android:background="@drawable/custom_edittext"
                 android:layout_marginTop="20dp"
+                android:background="@drawable/custom_edittext"
+                android:drawablePadding="8dp"
+                android:hint="@string/euro"
                 android:inputType="numberDecimal"
                 android:padding="8dp"
-                android:hint="Euro"
-                android:drawablePadding="8dp"/>
+                android:textColorHint="#82B1FF" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Edit your receipt"
+                android:text="@string/edit_your_receipt"
                 android:paddingTop="20dp"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -102,7 +120,8 @@
                 android:layout_height="48dp"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/round_button"
-                android:text="Add Receipt"
+                android:text="@string/add_receipt"
+                android:textColor="#263238"
                 android:textSize="18sp"
                 app:cornerRadius="20dp" />
 
@@ -116,16 +135,9 @@
         android:layout_height="48dp"
         android:layout_marginTop="30dp"
         android:background="@drawable/round_button"
-        android:text="Save"
+        android:text="@string/save"
+        android:textColor="#263238"
         android:textSize="18sp"
         app:cornerRadius="20dp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="81dp"
-        android:orientation="vertical">
-
-
-    </LinearLayout>
 
 </LinearLayout>
