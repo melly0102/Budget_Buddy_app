@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reLayoutInc"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    android:layout_margin="10dp"
+    android:background="@color/white"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/deleteRCINC"
+        android:layout_width="56dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="3dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/editRCINC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/nameRCINC"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/delete_icon">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/editRCINC"
+        android:layout_width="58dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="19dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/imageRCINC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/totalAmountRCINC"
+        app:layout_constraintTop_toBottomOf="@+id/deleteRCINC"
+        app:srcCompat="@drawable/edit_icon">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/imageRCINC"
+        android:layout_width="168dp"
+        android:layout_height="140dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ic_launcher_background">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/nameRCINC"
+        android:layout_width="248dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/dateRCINC"
+        app:layout_constraintEnd_toStartOf="@+id/deleteRCINC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/dateRCINC"
+        android:layout_width="244dp"
+        android:layout_height="21dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginBottom="8dp"
+        android:text="Date"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/totalAmountRCINC"
+        app:layout_constraintEnd_toStartOf="@+id/deleteRCINC"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/totalAmountRCINC"
+        app:layout_constraintTop_toBottomOf="@+id/nameRCINC">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/totalAmountRCINC"
+        android:layout_width="244dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginBottom="10dp"
+        android:text="Amount"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/receiptRCINC"
+        app:layout_constraintEnd_toStartOf="@+id/editRCINC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateRCINC">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/receiptRCINC"
+        android:layout_width="254dp"
+        android:layout_height="23dp"
+        android:text="Receipt:"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/imageRCINC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </TextView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

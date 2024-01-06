@@ -10,7 +10,7 @@ import android.widget.Toast
 
 
 class ChangePasswordActivity : AppCompatActivity() {
-    lateinit var password2 : EditText
+    lateinit var password2: EditText
     lateinit var password1: EditText
     lateinit var btn_reset: Button
 
@@ -24,40 +24,15 @@ class ChangePasswordActivity : AppCompatActivity() {
         password2 = findViewById(R.id.password2)
 
         btn_reset.setOnClickListener(View.OnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-            /* if (password1.text.toString() == password2.text.toString()){
 
-                // Finish the current activity (optional, depending on your use case)
-                finish()
-                Toast.makeText(this, "Password reset successful", Toast.LENGTH_SHORT).show()
+            if (!password1.text.toString().equals(password2.text.toString())) {
 
-            } else {
-                Toast.makeText(this, "The passwords don't match..", Toast.LENGTH_SHORT).show()
-            }
-        })*/
-        })
+                Toast.makeText(this, "The passwords don't match. ", Toast.LENGTH_SHORT).show()
+            } else{
+                    val intent = Intent(this, MainActivity::class.java)
+                    startActivity(intent)
+                }
+
+            })
+        }
     }
-}
-    /* private lateinit var binding: ActivityMainBinding
-     lateinit var password2 : EditText
-     lateinit var password1: EditText
-     lateinit var btn_reset: Button
-     override fun onCreate(savedInstanceState: Bundle?) {
-         super.onCreate(savedInstanceState)
-         binding = ActivityMainBinding.inflate(layoutInflater)
-         setContentView(binding.root)
-         btn_reset.setOnClickListener(View.OnClickListener {
-             if (password1.text.toString() == password2.text.toString()){
-                 val intent = Intent(this, OverviewActivity::class.java)
-                 startActivity(intent)
-
-                 // Finish the current activity (optional, depending on your use case)
-                 finish()
-                 Toast.makeText(this, "Password reset successful", Toast.LENGTH_SHORT).show()
-
-             } else {
-                 Toast.makeText(this, "The passwords don't match..", Toast.LENGTH_SHORT).show()
-             }
-         })
-     }*/
