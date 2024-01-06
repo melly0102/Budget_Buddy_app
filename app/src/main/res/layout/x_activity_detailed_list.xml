@@ -6,13 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".inc_exp.DetailedListActivity">
 
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="258dp"
         android:layout_height="39dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="305dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="132dp"
         android:text="This is the detailed List View"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_inc"
+        android:layout_width="388dp"
+        android:layout_height="364dp"
+        android:layout_marginBottom="176dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.621"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.524" />
 </androidx.constraintlayout.widget.ConstraintLayout>

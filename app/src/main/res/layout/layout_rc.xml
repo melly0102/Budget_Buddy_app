@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/reLayout"
     android:layout_width="match_parent"
-    android:layout_height="300dp"
+    android:layout_height="180dp"
     android:layout_margin="10dp"
     android:background="@color/white"
     android:padding="10dp"
@@ -11,15 +12,43 @@
 
     <ImageView
         android:id="@+id/deleteRC"
-        android:layout_width="49dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="48dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="12dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintHorizontal_bias="0.953"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/delete_icon">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/editRC"
+        android:layout_width="45dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="56dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/edit_icon">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/arrowRC"
+        android:layout_width="44dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="116dp"
+        android:scaleType="fitXY"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.954"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/arrow_right_icon">
 
     </ImageView>
 
@@ -33,7 +62,7 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.056"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/causeRC">
 

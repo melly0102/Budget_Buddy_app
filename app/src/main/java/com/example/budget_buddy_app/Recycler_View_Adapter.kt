@@ -30,6 +30,13 @@ class Recycler_View_Adapter(final var context: Context, val itemList: ArrayList<
         holder.ItemImage.setOnClickListener({
             Toast.makeText(context,"Delete Icon", Toast.LENGTH_LONG).show()
         })
+        holder.ItemImage2.setOnClickListener({
+            Toast.makeText(context,"Edit Icon", Toast.LENGTH_LONG).show()
+        })
+        holder.ItemImage3.setOnClickListener({
+            Toast.makeText(context,"Forward Icon", Toast.LENGTH_LONG).show()
+        })
+
 
         holder.ItemName.setText(itemList[position].name)
         holder.ItemCause.setText(itemList[position].cause)
@@ -45,6 +52,8 @@ class Recycler_View_Adapter(final var context: Context, val itemList: ArrayList<
 
         var ConstraintLayt: ConstraintLayout
         var ItemImage: ImageView
+        var ItemImage2: ImageView
+        var ItemImage3: ImageView
         var ItemName: TextView
         var ItemCause: TextView
         var ItemTotal: TextView
@@ -52,6 +61,9 @@ class Recycler_View_Adapter(final var context: Context, val itemList: ArrayList<
         init {
             ConstraintLayt = itemView.findViewById(R.id.reLayout) as ConstraintLayout
             ItemImage = itemView.findViewById(R.id.deleteRC) as ImageView
+            ItemImage2 = itemView.findViewById(R.id.editRC) as ImageView
+            ItemImage3 = itemView.findViewById(R.id.arrowRC) as ImageView
+
             ItemName = itemView.findViewById(R.id.nameRC) as TextView
             ItemCause = itemView.findViewById(R.id.causeRC) as TextView
             ItemTotal = itemView.findViewById(R.id.totalAmountRC) as TextView

@@ -15,12 +15,9 @@ import com.example.budget_buddy_app.category.MockList
 import com.example.budget_buddy_app.category.Model_Category
 import com.example.budget_buddy_app.inc_exp.DetailedListActivity
 
-private fun RecyclerView.addItemDecoration(applicationContext: Context?, vertical: Int) {
-
-}
 
 class OverviewActivity : AppCompatActivity() {
-    lateinit var btn: Button
+    lateinit var btn_category_view: Button
     lateinit var btnDetailedCategory: ImageButton
     lateinit var btnCalendar: ImageButton
     lateinit var btnArrow: ImageButton
@@ -28,9 +25,6 @@ class OverviewActivity : AppCompatActivity() {
 
     lateinit var recyclerView: RecyclerView
     lateinit var adapter: Recycler_View_Adapter
-
-    //val categoriesArrayList: MutableList<Categories> = mutableListOf()
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,7 +35,7 @@ class OverviewActivity : AppCompatActivity() {
         btnDetailedCategory = findViewById(R.id.btn_overview_category_detailed)
         btnArrow = findViewById(R.id.btn_overview_category_detailed)
         btnAdd = findViewById(R.id.btn_overview_add_category)
-        btn = findViewById(R.id.btn_category_view)
+        btn_category_view = findViewById(R.id.btn_category_view)
 
         recyclerView = findViewById(R.id.normal_recycler)
 
@@ -49,12 +43,6 @@ class OverviewActivity : AppCompatActivity() {
         val adapter = Recycler_View_Adapter(this, MockList.getModel() as ArrayList<Model_Category>)
         recyclerView.adapter = adapter
 
-       /* val categoriesArrayList: ArrayList<Categories> = ArrayList()
-      //  val adapter = CategoriesAdapter(this, categoriesArrayList)
-        recyclerView.addItemDecoration(applicationContext,LinearLayoutManager.VERTICAL))
-
-
-*/
 
         btnCalendar.setOnClickListener({
             Toast.makeText(this, "The calendar should open then", Toast.LENGTH_LONG).show()
@@ -67,7 +55,7 @@ class OverviewActivity : AppCompatActivity() {
             val intent = Intent(this, AddCategoryActivity::class.java)
             startActivity(intent)
         })
-        btn.setOnClickListener({
+        btn_category_view.setOnClickListener({
             val intent = Intent(this, DetailedListActivity::class.java)
             startActivity(intent)
         })
