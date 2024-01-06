@@ -26,6 +26,7 @@
         android:layout_marginTop="4dp"
         android:contentDescription="LogoutButton"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.929"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/baseline_logout_24" />
@@ -125,7 +126,7 @@
             app:layout_constraintHorizontal_bias="0.8"
             app:layout_constraintStart_toEndOf="@+id/imageView4"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.092"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/baseline_calendar_month_24" />
 
         <TextView
@@ -157,10 +158,11 @@
         android:id="@+id/btn_category_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="152dp"
+        android:layout_marginBottom="32dp"
         android:text="Detailed Category View"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
@@ -170,10 +172,10 @@
         android:contentDescription="@android:string/ok"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintHorizontal_bias="0.952"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
-        app:layout_constraintVertical_bias="0.052"
+        app:layout_constraintVertical_bias="0.046"
         app:srcCompat="@drawable/add_icon" />
 
     <ImageButton
@@ -181,12 +183,24 @@
         android:layout_width="83dp"
         android:layout_height="68dp"
         android:layout_marginBottom="228dp"
+        android:contentDescription="@android:string/ok"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintHorizontal_bias="0.969"
         app:layout_constraintStart_toStartOf="parent"
-        android:contentDescription="@android:string/ok"
         app:srcCompat="@drawable/arrow_right_icon" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/normal_recycler"
+        android:layout_width="316dp"
+        android:layout_height="302dp"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="1.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

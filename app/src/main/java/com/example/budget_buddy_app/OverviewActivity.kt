@@ -1,15 +1,23 @@
 package com.example.budget_buddy_app
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageButton
 import android.widget.Toast
-import com.example.budget_buddy_app.R
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.budget_buddy_app.category.AddCategoryActivity
 import com.example.budget_buddy_app.category.DetailedCategoryActivity
+import com.example.budget_buddy_app.category.MockList
+import com.example.budget_buddy_app.category.Model_Category
 import com.example.budget_buddy_app.inc_exp.DetailedListActivity
+
+private fun RecyclerView.addItemDecoration(applicationContext: Context?, vertical: Int) {
+
+}
 
 class OverviewActivity : AppCompatActivity() {
     lateinit var btn: Button
@@ -18,6 +26,10 @@ class OverviewActivity : AppCompatActivity() {
     lateinit var btnArrow: ImageButton
     lateinit var btnAdd: ImageButton
 
+    lateinit var recyclerView: RecyclerView
+    lateinit var adapter: Recycler_View_Adapter
+
+    //val categoriesArrayList: MutableList<Categories> = mutableListOf()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +43,18 @@ class OverviewActivity : AppCompatActivity() {
         btnAdd = findViewById(R.id.btn_overview_add_category)
         btn = findViewById(R.id.btn_category_view)
 
+        recyclerView = findViewById(R.id.normal_recycler)
+
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        val adapter = Recycler_View_Adapter(this, MockList.getModel() as ArrayList<Model_Category>)
+        recyclerView.adapter = adapter
+
+       /* val categoriesArrayList: ArrayList<Categories> = ArrayList()
+      //  val adapter = CategoriesAdapter(this, categoriesArrayList)
+        recyclerView.addItemDecoration(applicationContext,LinearLayoutManager.VERTICAL))
+
+
+*/
 
         btnCalendar.setOnClickListener({
             Toast.makeText(this, "The calendar should open then", Toast.LENGTH_LONG).show()
@@ -52,4 +76,5 @@ class OverviewActivity : AppCompatActivity() {
 
         })
     }
+
 }
