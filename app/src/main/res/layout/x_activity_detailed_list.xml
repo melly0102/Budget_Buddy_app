@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background_img"
+
     tools:context=".inc_exp.DetailedListActivity">
 
 
@@ -11,9 +13,12 @@
         android:id="@+id/textView"
         android:layout_width="258dp"
         android:layout_height="39dp"
-        android:layout_marginStart="88dp"
-        android:layout_marginTop="132dp"
-        android:text="This is the detailed List View"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="140dp"
+        android:text="Name of category"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -29,4 +34,52 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         app:layout_constraintVertical_bias="0.524" />
+
+    <ImageView
+        android:id="@+id/list_logo"
+        android:layout_width="113dp"
+        android:layout_height="105dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.946"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bb_logo" />
+
+    <TextView
+        android:id="@+id/totalAmount_list_transactions"
+        android:layout_width="343dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="136dp"
+        android:text="Total: "
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_addIncomeExpense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/round_button"
+        android:text="Add income/expense"
+        android:textSize="18sp"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="132dp"
+        android:backgroundTint="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.975"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/baseline_euro_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

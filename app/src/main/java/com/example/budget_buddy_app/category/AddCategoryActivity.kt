@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import com.example.budget_buddy_app.MainActivity
+import com.example.budget_buddy_app.OverviewActivity
 import com.example.budget_buddy_app.R
 
 class AddCategoryActivity : AppCompatActivity() {
@@ -15,7 +16,7 @@ class AddCategoryActivity : AppCompatActivity() {
         btn= findViewById(R.id.btn_save)
 
         btn.setOnClickListener({
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, OverviewActivity::class.java)
             startActivity(intent)
         })
 

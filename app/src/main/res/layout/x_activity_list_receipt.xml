@@ -4,15 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".receipt.ListReceiptActivity">
+    tools:context=".receipt.ListReceiptActivity"
+    android:background="@drawable/background_img"
+    >
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="258dp"
         android:layout_height="39dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="305dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="44dp"
         android:text="This is the detailed List View of a receipt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_receipts"
+        android:layout_width="296dp"
+        android:layout_height="554dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 </androidx.constraintlayout.widget.ConstraintLayout>

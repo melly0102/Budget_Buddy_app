@@ -10,7 +10,7 @@ class Model_Category(val name: String, val cause: String, val totalAmount: Int)
 
             val itemModel1 = Model_Category(
                 "Erste Bank",
-                "Privat",
+                "work",
                 2000
             )
             val itemModel2 = Model_Category(

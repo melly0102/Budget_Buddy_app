@@ -29,6 +29,10 @@ class Recycler_Inc(final var context: Context, val itemList: ArrayList<Model_Inc
 
         holder.ItemImage.setOnClickListener({
             Toast.makeText(context,"Delete Icon", Toast.LENGTH_LONG).show()
+
+            itemList.removeAt(position)
+            this.notifyDataSetChanged()
+            Toast.makeText(context,"Delete Icon", Toast.LENGTH_LONG).show()
         })
         holder.ItemImage2.setOnClickListener({
             Toast.makeText(context,"Edit Icon", Toast.LENGTH_LONG).show()
@@ -71,7 +75,7 @@ class Recycler_Inc(final var context: Context, val itemList: ArrayList<Model_Inc
 
             ItemNameInc = itemView.findViewById(R.id.nameRCINC) as TextView
             ItemDateInc = itemView.findViewById(R.id.dateRCINC) as TextView
-            ItemAmountInc = itemView.findViewById(R.id.totalAmountRCINC) as TextView
+            ItemAmountInc = itemView.findViewById(R.id.totalAmountRCINC ) as TextView
             ItemReceipt = itemView.findViewById(R.id.receiptRCINC) as TextView
 
         }
