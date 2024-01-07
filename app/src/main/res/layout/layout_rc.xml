@@ -12,8 +12,8 @@
 
     <ImageView
         android:id="@+id/deleteRC"
-        android:layout_width="48dp"
-        android:layout_height="41dp"
+        android:layout_width="51dp"
+        android:layout_height="50dp"
         android:layout_marginTop="12dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,8 +26,8 @@
 
     <ImageView
         android:id="@+id/editRC"
-        android:layout_width="45dp"
-        android:layout_height="41dp"
+        android:layout_width="51dp"
+        android:layout_height="50dp"
         android:layout_marginTop="56dp"
         android:scaleType="fitXY"
         app:layout_constraintEnd_toEndOf="parent"

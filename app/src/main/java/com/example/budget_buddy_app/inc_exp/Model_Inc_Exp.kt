@@ -18,13 +18,13 @@ class Model_Inc_Exp(val name_inc: String, val date: String, val amount: Int,val 
                 "Erste Bank",
                 "22.01.2023",
                 2000,
-                R.drawable.ic_launcher_background
+                R.drawable.background_img
             )
             val itemModel3 = Model_Inc_Exp(
                 "Erste Bank",
                 "22.01.2023",
                 2000,
-                R.drawable.ic_launcher_background
+                R.drawable.logo_background
             )
 
             val itemList: ArrayList<Model_Inc_Exp> = ArrayList()

@@ -63,7 +63,7 @@
         android:focusable="false"
         android:hint="Kategorie auswählen"
         android:padding="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/button_save"
+        app:layout_constraintBottom_toTopOf="@+id/btn_save_add_receipts"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -77,7 +77,7 @@
         app:layout_constraintTop_toTopOf="@+id/editTextCategory" />
 
     <Button
-        android:id="@+id/button_save"
+        android:id="@+id/btn_save_add_receipts"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="133dp"

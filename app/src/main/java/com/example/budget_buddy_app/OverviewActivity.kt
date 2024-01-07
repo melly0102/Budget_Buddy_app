@@ -1,6 +1,5 @@
 package com.example.budget_buddy_app
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -44,6 +43,18 @@ class OverviewActivity : AppCompatActivity() {
         recyclerView.adapter = adapter
 
 
+
+        adapter.setOnItemClickListener(object: Recycler_View_Adapter.onItemClickListenerInterface{
+            override fun onItemClickListener(position: Int) {
+                Toast.makeText(this@OverviewActivity, "You clicked on item number $position", Toast.LENGTH_LONG).show()
+            }
+
+        })
+        /*
+        var adapter1= Recycler_View_Adapter(this,MockList.getModel() as ArrayList<Model_Category>)
+        recyclerView.adapter = adapter1
+        adapter1.d
+*/
         btnCalendar.setOnClickListener({
             Toast.makeText(this, "The calendar should open then", Toast.LENGTH_LONG).show()
         })
