@@ -8,12 +8,25 @@
     android:background="@drawable/background_img"
     >
 
+    <ImageButton
+        android:id="@+id/backArrowListReceipts"
+        android:layout_width="104dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#00FFFFFF"
+        android:contentDescription="Add a brief description here"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_arrow_back_ios_24" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="258dp"
         android:layout_height="39dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="80dp"
         android:text="This is the detailed List View of a receipt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

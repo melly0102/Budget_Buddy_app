@@ -8,23 +8,24 @@ import android.widget.ImageButton
 import com.example.budget_buddy_app.MainActivity
 import com.example.budget_buddy_app.OverviewActivity
 import com.example.budget_buddy_app.R
+import com.example.budget_buddy_app.R.*
 
 class EditCategoryActivity : AppCompatActivity() {
-    lateinit var btn: ImageButton
-    lateinit var deleteBtn: Button
+    lateinit var btndelete: ImageButton
+    lateinit var btnSaveEdit: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_edit_category)
+        setContentView(layout.activity_edit_category)
+        btndelete = findViewById(id.deleteBtnEditCategory)
+        btnSaveEdit = findViewById(id.btn_save_edit_category)
 
-        deleteBtn = findViewById(R.id.deleteBtn)
-        btn = findViewById(R.id.btn_save_edit_income)
 
-        btn.setOnClickListener({
+        btndelete.setOnClickListener({
+            //Still to do delete entry
             val intent = Intent(this, OverviewActivity::class.java)
             startActivity(intent)
         })
-
-        deleteBtn.setOnClickListener({
+        btnSaveEdit.setOnClickListener({
             finish()
         })
 

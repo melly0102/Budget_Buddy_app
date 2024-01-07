@@ -7,6 +7,6 @@ import com.example.budget_buddy_app.R
 class DetailedCategoryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.x_activity_list_category)
+        setContentView(R.layout.layout_rc)
     }
 }

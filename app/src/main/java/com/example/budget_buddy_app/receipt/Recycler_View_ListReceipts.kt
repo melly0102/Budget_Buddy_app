@@ -15,7 +15,16 @@ import com.example.budget_buddy_app.inc_exp.Model_Inc_Exp
 
 class Recycler_View_ListReceipts(final var context: Context, val itemList: ArrayList<Model_Receipt>) :
 RecyclerView.Adapter<Recycler_View_ListReceipts.ModelViewHolder>() {
+    private lateinit var mListener: onItemClickListenerInterface
+    interface onItemClickListenerInterface{
+        fun onItemClickListener(position:Int)
+    }
 
+    fun setOnItemClickListener(listener: onItemClickListenerInterface){
+        mListener = listener
+
+
+    }
 
     override fun onCreateViewHolder(
         parent: ViewGroup,
@@ -62,7 +71,7 @@ RecyclerView.Adapter<Recycler_View_ListReceipts.ModelViewHolder>() {
 
 
         init {
-            ConstraintLayt = itemView.findViewById(R.id.reLayoutInc) as ConstraintLayout
+            ConstraintLayt = itemView.findViewById(R.id.reLayoutRE) as ConstraintLayout
             ItemImageRe = itemView.findViewById(R.id.deleteRCRE) as ImageView
 
             ItemNameRe = itemView.findViewById(R.id.nameRCRE) as TextView
